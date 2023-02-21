@@ -2,11 +2,100 @@
 {% load static %}
 <!DOCTYPE html>
 <html>
+
 <head>
-    <title>Image Template</title>
+    <title>explore</title>
 </head>
 <body>
-    <h1>{{ image.name }}</h1>
-    <img src="{{image.image.url}}" alt="Image">
+    <div class="caption-container">
+        <h3>&nbsp;- {{image.name}} - &nbsp;</h3>
+        </div>
+    <div class="container">
+            
+            <div class="top-button-container">
+            <button class="button">&uarr;</button>
+            </div>
+            <div class="container">
+                <div class="left-button-container">
+                    <button class="button">&larr;</button>
+                    </div>
+            <img src="{{image.image.url}}" alt="Image">
+            <div class="right-button-container">
+                <button class="button">&rarr;</button>
+                </div>
+            </div>
+            
+                
+            
+            <div class="bottom-button-container">
+                <button class="button">&darr;</button>
+                </div>
+        </div>
+            
 </body>
 </html>
+
+<style>
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        margin: .5cm;
+    }
+    
+    body{
+        background-color: rgb(0, 0, 0);
+    }
+
+    h3{
+        color: #ffffff;
+        font-family:'Times New Roman', Times, serif;
+        text-align: center;
+    }
+
+    img {
+        max-width: 60%;
+        height: auto;
+    }
+
+    .caption-container {
+        visibility: hidden;
+        display: block;
+    }
+    .top-button-container {
+        display: flex;
+        justify-content: center;
+        margin-bottom: .25cm;
+    }
+
+    .bottom-button-container {
+        display: flex;
+        justify-content: center;
+        margin-top: .25cm;
+    }
+
+    .left-button-container {
+        display: flex;
+        justify-content: center;
+        margin-right: 100px;
+    }
+
+    .right-button-container {
+        display: flex;
+        justify-content: center;
+        margin-left: 100px;
+    }
+    
+    .button {
+        margin: 0 10px;
+        padding: 10px;
+        background-color: #000000;
+        color: rgb(255, 255, 255);
+        border: none;
+        border-radius: 5px;
+        font-size: 32px;
+        min-width: 1.5cm;
+        min-height: 1.5cm;
+    }
+</style>
