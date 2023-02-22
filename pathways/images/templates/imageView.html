@@ -1,4 +1,5 @@
 
+
 {% load static %}
 <!DOCTYPE html>
 <html>
@@ -8,28 +9,31 @@
     <link rel="stylesheet" type="text/css" href="{% static 'css/allStyles.css' %}">
 </head>
 <body>
-    <div class="caption-container">
-        <h3>&nbsp;- {{image.name}} - &nbsp;</h3>
-        </div>
+
     <div class="container">
             
-            <div class="top-button-container">
-            <button class="button">&uarr;</button>
+        <div style="{% if image.up is null %}visibility: hidden;{% endif %}"
+        class="top-button-container">
+                <a href="{{image.up.id}}/"class="button">&uarr;</a>
             </div>
             <div class="container">
-                <div class="left-button-container">
-                    <button class="button">&larr;</button>
+                <div style="{% if image.left is null %}visibility: hidden;{% endif %}"
+            class="left-button-container">
+                    <a href="{{image.left.id}}/"class="button">&larr;</a>
                     </div>
             <img src="{{image.image.url}}" alt="Image">
-            <div class="right-button-container">
-                <button class="button">&rarr;</button>
+            
+            <div style="{% if image.right is null %}visibility: hidden;{% endif %}"
+            class="right-button-container">
+                <a href="{{image.right.id}}/"class="button">&rarr;</a>
                 </div>
             </div>
             
                 
             
-            <div class="bottom-button-container">
-                <button class="button">&darr;</button>
+            <div style="{% if image.down is null %}visibility: hidden;{% endif %}"
+            class="down-button-container">
+                <a href="{{image.down.id}}/"class="button">&darr;</a>
                 </div>
         </div>
             

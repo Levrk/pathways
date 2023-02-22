@@ -1,6 +1,6 @@
-from django.urls import path
+from django.urls import re_path
 from .views import imageView
 
 urlpatterns = [
-    path('image/<int:image_id>/', imageView, name='imageView'),
+    re_path(r'^image/(?:\w+/)*(\d+)/$', imageView, name='imageView'),
 ]
