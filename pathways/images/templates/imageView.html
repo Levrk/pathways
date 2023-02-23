@@ -7,6 +7,7 @@
 <head>
     <title>explore</title>
     <link rel="stylesheet" type="text/css" href="{% static 'css/allStyles.css' %}">
+    <script src="{% static 'js/main.js' %}"></script>
 </head>
 <body>
 
@@ -14,18 +15,18 @@
             
         <div style="{% if image.up is null %}visibility: hidden;{% endif %}"
         class="top-button-container">
-                <a href="{{image.up.id}}/"class="button">&uarr;</a>
+                <button onclick='upArrow("{{image.up.id}}/")' class="button">&uarr;</button>
             </div>
             <div class="container">
                 <div style="{% if image.left is null %}visibility: hidden;{% endif %}"
             class="left-button-container">
-                    <a href="{{image.left.id}}/"class="button">&larr;</a>
+                <button onclick='leftArrow("{{image.left.id}}/")' class="button">&larr;</button>
                     </div>
             <img src="{{image.image.url}}" alt="Image">
             
             <div style="{% if image.right is null %}visibility: hidden;{% endif %}"
             class="right-button-container">
-                <a href="{{image.right.id}}/"class="button">&rarr;</a>
+                <button onclick='rightArrow("{{image.right.id}}/")' class="button">&rarr;</button>
                 </div>
             </div>
             
@@ -33,10 +34,54 @@
             
             <div style="{% if image.down is null %}visibility: hidden;{% endif %}"
             class="down-button-container">
-                <a href="{{image.down.id}}/"class="button">&darr;</a>
+                <button onclick='downArrow("{{image.down.id}}/")' class="button">&darr;</button>
                 </div>
         </div>
             
 </body>
 </html>
+
+<script> 
+
+document.addEventListener('keydown', function(event) {
+    // if there is an image above
+    {% if image.up is not null %}
+
+    if (event.code === 'ArrowUp') {
+    // Call function for up arrow key
+    upArrow("{{image.up.id}}/");
+    } 
+
+    {% endif %}
+    // if there is an image below
+    {% if image.down is not null %}
+
+    if (event.code === 'ArrowDown') {
+    // Call function for down arrow key
+    downArrow("{{image.down.id}}/");
+    } 
+    
+    {% endif %}
+    // if there is an image to the left
+    {% if image.left is not null %}
+
+    if (event.code === 'ArrowLeft') {
+    // Call function for left arrow key
+    leftArrow("{{image.left.id}}/");
+    } 
+    
+    {% endif %}
+    // if there is an image to the right
+    {% if image.right is not null %}
+    
+    if (event.code === 'ArrowRight') {
+    // Call function for right arrow key
+    rightArrow("{{image.right.id}}/");
+    }
+
+    {% endif %}
+});
+
+
+</script>
 
