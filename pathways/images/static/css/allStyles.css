@@ -141,7 +141,19 @@ color: rgb(255, 127, 127);
 }
 
 .fadeIn {
-    animation: fadeIn .5s cubic-bezier(0.445, 0.05, 0.55, 0.95) forwards;
+    animation: fadeIn .4s cubic-bezier(0.445, 0.05, 0.55, 0.95) forwards;
+}
+    @keyframes fadeIn {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+}
+
+.slowFadeIn {
+    animation: fadeIn .6s cubic-bezier(0.445, 0.05, 0.55, 0.95) forwards;
 }
     @keyframes fadeIn {
         0% {
