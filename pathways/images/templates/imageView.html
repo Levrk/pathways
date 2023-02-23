@@ -15,18 +15,18 @@
             
         <div style="{% if image.up is null %}visibility: hidden;{% endif %}"
         class="top-button-container">
-                <button onclick='upArrow("{{image.up.id}}/")' class="button">&uarr;</button>
+                <button onclick='upArrow("{{image.up.id}}/")' class="arrowButton">&uarr;</button>
             </div>
             <div class="container">
                 <div style="{% if image.left is null %}visibility: hidden;{% endif %}"
             class="left-button-container">
-                <button onclick='leftArrow("{{image.left.id}}/")' class="button">&larr;</button>
+                <button onclick='leftArrow("{{image.left.id}}/")' class="arrowButton">&larr;</button>
                     </div>
-            <img src="{{image.image.url}}" alt="Image">
+            <img id="img" src="{{image.image.url}}" alt="Image">
             
             <div style="{% if image.right is null %}visibility: hidden;{% endif %}"
             class="right-button-container">
-                <button onclick='rightArrow("{{image.right.id}}/")' class="button">&rarr;</button>
+                <button onclick='rightArrow("{{image.right.id}}/")' class="arrowButton">&rarr;</button>
                 </div>
             </div>
             
@@ -34,7 +34,7 @@
             
             <div style="{% if image.down is null %}visibility: hidden;{% endif %}"
             class="down-button-container">
-                <button onclick='downArrow("{{image.down.id}}/")' class="button">&darr;</button>
+                <button onclick='downArrow("{{image.down.id}}/")' class="arrowButton">&darr;</button>
                 </div>
         </div>
             
