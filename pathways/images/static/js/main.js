@@ -7,8 +7,7 @@ window.addEventListener('load', function() {
     arrows.forEach(function(arrow) {
         arrow.classList.add('fadeIn');
     });
-    imageConst.classList.add('slowFadeIn')
-    
+    imageConst.classList.add('slowFadeIn');
 });
 
 
@@ -17,9 +16,6 @@ function upArrow(url) {
     if (focusNext === false){return}
     const imageConst = document.getElementById("img");
     const arrows = document.querySelectorAll(".arrowButton");
-    arrows.forEach(function(arrow) {
-        arrow.classList.remove('reEscape');
-    }); 
     imageConst.classList.remove('slowFadeIn')
     imageConst.classList.add("onUp");
     arrows.forEach(function(arrow) {
@@ -35,9 +31,6 @@ function downArrow(url) {
     if (focusNext === false){return}
     const imageConst = document.getElementById("img");
     const arrows = document.querySelectorAll(".arrowButton");
-    arrows.forEach(function(arrow) {
-        arrow.classList.remove('reEscape');
-    }); 
     imageConst.classList.remove('slowFadeIn')
     imageConst.classList.add("onDown");
     arrows.forEach(function(arrow) {
@@ -53,9 +46,6 @@ function leftArrow(url) {
     if (focusNext === false){return}
     const imageConst = document.getElementById("img");
     const arrows = document.querySelectorAll(".arrowButton");
-    arrows.forEach(function(arrow) {
-        arrow.classList.remove('reEscape');
-    }); 
     imageConst.classList.remove('slowFadeIn')
     imageConst.classList.add("onLeft");
     arrows.forEach(function(arrow) {
@@ -71,9 +61,6 @@ function rightArrow(url) {
     if (focusNext === false){return}
     const imageConst = document.getElementById("img");
     const arrows = document.querySelectorAll(".arrowButton");
-    arrows.forEach(function(arrow) {
-        arrow.classList.remove('reEscape');
-    }); 
     imageConst.classList.remove('slowFadeIn')
     imageConst.classList.add("onRight");
     arrows.forEach(function(arrow) {
@@ -83,16 +70,6 @@ function rightArrow(url) {
     setTimeout(function() {
         window.location.href = url;
 }, 500);
-}
-
-function waitForSpaceBar() {
-    return new Promise(function(resolve) {
-    document.addEventListener('keydown', function(event) {
-        if (event.code === 'Space') {
-        resolve();
-        }
-    });
-    });
 }
 
 function handleSpace( ) {
@@ -112,9 +89,6 @@ function focus() {
     const imageConst = document.getElementById("img");
     const captionConst = document.getElementById("caption");
     const arrows = document.querySelectorAll(".arrowButton");
-    arrows.forEach(function(arrow) {
-        arrow.classList.remove('reEscape');
-    }); 
     captionConst.classList.remove('fadeOut')
     captionConst.classList.add('slowFadeIn')
     arrows.forEach(function(arrow) {
@@ -128,16 +102,16 @@ function focus() {
 function unFocus() {
     const imageConst = document.getElementById("img");
     const arrows = document.querySelectorAll(".arrowButton");
-    arrows.forEach(function(arrow) {
-        arrow.classList.remove('reEscape');
-    }); 
     const captionConst = document.getElementById("caption");
     captionConst.classList.remove('slowFadeIn')
     captionConst.classList.add('fadeOut')
-    
     arrows.forEach(function(arrow) {
         arrow.classList.remove('escape');
         arrow.classList.add('reEscape');
-        
     }); 
+    setTimeout(function() {
+        arrows.forEach(function(arrow) {
+            arrow.classList.remove('reEscape');
+        }); 
+}, 500);
 }
