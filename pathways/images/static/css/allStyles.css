@@ -8,6 +8,7 @@
 
 body{
     background-color: rgb(0, 0, 0);
+    overflow: hidden;
 }
 
 h3{
@@ -20,11 +21,23 @@ h3{
 
 img {
     max-width: 60%;
-    height: auto;
 }
 
 
+p {
+    color:#ffffff;
+    opacity: 0;
+    justify-content: center;
+}
 
+.title{
+display: block;
+
+}
+.below{
+    display: block;
+    text-align: center;
+}
 
 .caption-container {
     visibility: hidden;
@@ -33,13 +46,12 @@ img {
 .top-button-container {
     display: flex;
     justify-content: center;
-    margin-bottom: .25cm;
+    margin-bottom: .2cm;
 }
 
 .bottom-button-container {
-    display: flex;
+    display: block;
     justify-content: center;
-    margin-top: .25cm;
 }
 
 .left-button-container {
@@ -156,6 +168,56 @@ color: rgb(255, 127, 127);
     animation: fadeIn .6s cubic-bezier(0.445, 0.05, 0.55, 0.95) forwards;
 }
     @keyframes fadeIn {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+}
+
+
+.focus {
+    animation: focus 1s cubic-bezier(0.445, 0.05, 0.55, 0.95) forwards;
+}
+    @keyframes focus {
+        0% {
+            transform size: 100%;
+        }
+        100% {
+            transform size: 180%;
+        }
+}
+
+.unFocus {
+    animation: unFocus 1s cubic-bezier(0.445, 0.05, 0.55, 0.95) forwards;
+}
+    @keyframes unFocus {
+        0% {
+            transform size: 180%;
+        }
+        100% {
+            transform size: 100%;
+        }
+}
+
+.escape {
+    animation: escape 1s cubic-bezier(0.445, 0.05, 0.55, 0.95) forwards;
+}
+    @keyframes escape {
+        0% {
+            opacity: 1;
+        }
+        100% {
+            opacity: 0;
+    }
+}
+
+
+.reEscape {
+    animation: reEscape 1s cubic-bezier(0.445, 0.05, 0.55, 0.95) forwards;
+}
+    @keyframes reEscape {
         0% {
             opacity: 0;
         }

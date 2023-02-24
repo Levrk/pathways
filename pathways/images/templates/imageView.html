@@ -29,14 +29,15 @@
                 <button onclick='rightArrow("{{image.right.id}}/")' class="arrowButton">&rarr;</button>
                 </div>
             </div>
-            
-                
+            <div class="below">
+            <p id="caption"> {{image.name}}</p>
             
             <div style="{% if image.down is null %}visibility: hidden;{% endif %}"
             class="down-button-container">
                 <button onclick='downArrow("{{image.down.id}}/")' class="arrowButton">&darr;</button>
                 </div>
-        </div>
+            </div>
+        
             
 </body>
 </html>
@@ -44,6 +45,14 @@
 <script> 
 
 document.addEventListener('keydown', function(event) {
+    
+    //if imageConst class is not focus
+    if (event.code === 'Space') {
+    // Call function for up arrow key
+    handleSpace();
+    } 
+
+
     // if there is an image above
     {% if image.up is not null %}
 
