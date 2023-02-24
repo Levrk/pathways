@@ -3,7 +3,6 @@
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    margin: .5cm;
 }
 
 body{
@@ -20,6 +19,7 @@ h3{
 
 
 img {
+    opacity: 0;
     max-width: 60%;
 }
 
@@ -80,8 +80,7 @@ display: block;
 }
 
 .arrowButton:hover{
-color: rgb(255, 127, 127);
-
+color: rgb(255, 0, 0);
 }
 
 .onRight {
@@ -153,7 +152,7 @@ color: rgb(255, 127, 127);
 }
 
 .fadeIn {
-    animation: fadeIn .4s cubic-bezier(0.445, 0.05, 0.55, 0.95) forwards;
+    animation: fadeIn .6s cubic-bezier(0.445, 0.05, 0.55, 0.95) forwards;
 }
     @keyframes fadeIn {
         0% {
@@ -165,7 +164,7 @@ color: rgb(255, 127, 127);
 }
 
 .slowFadeIn {
-    animation: fadeIn .6s cubic-bezier(0.445, 0.05, 0.55, 0.95) forwards;
+    animation: fadeIn 1s cubic-bezier(0.645, 0.045, 0.355, 1) forwards;
 }
     @keyframes fadeIn {
         0% {
