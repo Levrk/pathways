@@ -15,6 +15,7 @@ window.addEventListener('load', function() {
 function upArrow(url) {
     if (focusNext === false){return}
     const imageConst = document.getElementById("img");
+    imageConst.classList.remove('unFocus');
     const arrows = document.querySelectorAll(".arrowButton");
     imageConst.classList.remove('slowFadeIn')
     imageConst.classList.add("onUp");
@@ -30,6 +31,7 @@ function upArrow(url) {
 function downArrow(url) {
     if (focusNext === false){return}
     const imageConst = document.getElementById("img");
+    imageConst.classList.remove('unFocus');
     const arrows = document.querySelectorAll(".arrowButton");
     imageConst.classList.remove('slowFadeIn')
     imageConst.classList.add("onDown");
@@ -45,6 +47,7 @@ function downArrow(url) {
 function leftArrow(url) {
     if (focusNext === false){return}
     const imageConst = document.getElementById("img");
+    imageConst.classList.remove('unFocus');
     const arrows = document.querySelectorAll(".arrowButton");
     imageConst.classList.remove('slowFadeIn')
     imageConst.classList.add("onLeft");
@@ -60,6 +63,7 @@ function leftArrow(url) {
 function rightArrow(url) {
     if (focusNext === false){return}
     const imageConst = document.getElementById("img");
+    imageConst.classList.remove('unFocus');
     const arrows = document.querySelectorAll(".arrowButton");
     imageConst.classList.remove('slowFadeIn')
     imageConst.classList.add("onRight");
@@ -87,10 +91,13 @@ function handleSpace( ) {
 function focus() {
     
     const imageConst = document.getElementById("img");
+    imageConst.classList.remove('unFocus'); 
+    imageConst.classList.remove('unFocus');
+    imageConst.classList.add('focus');
     const captionConst = document.getElementById("caption");
     const arrows = document.querySelectorAll(".arrowButton");
-    captionConst.classList.remove('fadeOut')
-    captionConst.classList.add('slowFadeIn')
+    captionConst.classList.remove('captionOut');
+    captionConst.classList.add('captionIn');
     arrows.forEach(function(arrow) {
         arrow.classList.remove('fadeIn');
         arrow.classList.remove('reEscape');
@@ -101,10 +108,12 @@ function focus() {
 
 function unFocus() {
     const imageConst = document.getElementById("img");
+    imageConst.classList.remove('focus');
+    imageConst.classList.add('unFocus');
     const arrows = document.querySelectorAll(".arrowButton");
     const captionConst = document.getElementById("caption");
-    captionConst.classList.remove('slowFadeIn')
-    captionConst.classList.add('fadeOut')
+    captionConst.classList.remove('captionIn');
+    captionConst.classList.add('captionOut');
     arrows.forEach(function(arrow) {
         arrow.classList.remove('escape');
         arrow.classList.add('reEscape');
