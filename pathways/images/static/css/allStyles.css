@@ -17,16 +17,17 @@ h3{
 }
 
 
-
-img {
+.img{
     opacity: 0;
-    max-width: 60%;
+    max-width: 60%;  
 }
 
-
 p {
-    color:#ffffff;
+    display: unset;
+    color:#000000;
+    background-color: #ffffff;
     opacity: 0;
+    font-size: x-large;
     justify-content: center;
 }
 
@@ -70,7 +71,7 @@ display: block;
     text-decoration: none;
     margin: 0 10px;
     padding: 10px;
-    background-color: #000000;
+    background-color:  rgba(255, 255, 255, 0);
     color: rgb(255, 255, 255);
     border: none;
     border-radius: 5px;
@@ -177,26 +178,28 @@ color: rgb(255, 0, 0);
 
 
 .focus {
+    opacity: 1;
     animation: focus 1s cubic-bezier(0.445, 0.05, 0.55, 0.95) forwards;
 }
     @keyframes focus {
         0% {
-            transform size: 100%;
+            transform: scale(1) ;
         }
         100% {
-            transform size: 180%;
+            transform: scale(1.2) ;
         }
 }
 
 .unFocus {
+    opacity: 1;
     animation: unFocus 1s cubic-bezier(0.445, 0.05, 0.55, 0.95) forwards;
 }
     @keyframes unFocus {
         0% {
-            transform size: 180%;
+            transform: scale(1.2) ;
         }
         100% {
-            transform size: 100%;
+            transform: scale(1) ;
         }
 }
 
@@ -222,5 +225,29 @@ color: rgb(255, 0, 0);
         }
         100% {
             opacity: 1;
+        }
+}
+
+.captionIn {
+    animation: captionIn .6s cubic-bezier(0.445, 0.05, 0.55, 0.95) forwards;
+}
+    @keyframes captionIn {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+}
+
+.captionOut {
+    animation: captionOut .6s cubic-bezier(0.445, 0.05, 0.55, 0.95) forwards;
+}
+    @keyframes captionOut {
+        0% {
+            opacity: 1;
+        }
+        100% {
+            opacity: 0;
         }
 }

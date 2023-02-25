@@ -22,7 +22,7 @@
             class="left-button-container">
                 <button onclick='leftArrow("{{image.left.id}}/")' class="arrowButton">&larr;</button>
                     </div>
-            <img id="img" src="{{image.image.url}}" alt="Image">
+            <img class="img" id="img" src="{{image.image.url}}" alt="Image">
             
             <div style="{% if image.right is null %}visibility: hidden;{% endif %}"
             class="right-button-container">
@@ -30,7 +30,7 @@
                 </div>
             </div>
             <div class="below">
-            <p id="caption"> {{image.name}}</p>
+            <p id="caption"> &nbsp;{{image.name}}&nbsp;</p>
             
             <div style="{% if image.down is null %}visibility: hidden;{% endif %}"
             class="down-button-container">
