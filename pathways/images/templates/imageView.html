@@ -10,35 +10,23 @@
     <script src="{% static 'js/main.js' %}"></script>
 </head>
 <body>
-
+    
+        
+    <div class="page"> 
     <div class="container">
+            {% include 'arrows.html' %}
+            <div class="img-container">
             
-        <div style="{% if image.up is null %}visibility: hidden;{% endif %}"
-        class="top-button-container">
-                <button onclick='upArrow("{{image.up.id}}/")' class="arrowButton">&uarr;</button>
-            </div>
-            <div class="container">
-                <div style="{% if image.left is null %}visibility: hidden;{% endif %}"
-            class="left-button-container">
-                <button onclick='leftArrow("{{image.left.id}}/")' class="arrowButton">&larr;</button>
-                    </div>
             <img class="img" id="img" src="{{image.image.url}}" alt="Image">
             
-            <div style="{% if image.right is null %}visibility: hidden;{% endif %}"
-            class="right-button-container">
-                <button onclick='rightArrow("{{image.right.id}}/")' class="arrowButton">&rarr;</button>
-                </div>
             </div>
-            <div class="below">
-            <p id="caption"> &nbsp;{{image.name}}&nbsp;</p>
+            {% include 'arrows.html' %}
             
-            <div style="{% if image.down is null %}visibility: hidden;{% endif %}"
-            class="down-button-container">
-                <button onclick='downArrow("{{image.down.id}}/")' class="arrowButton">&darr;</button>
-                </div>
-            </div>
-        
-            
+    </div>
+    <div class="caption-container">
+    <p id="caption"> &nbsp;{{image.name}}&nbsp;</p>
+    </div>
+    </div>
 </body>
 </html>
 

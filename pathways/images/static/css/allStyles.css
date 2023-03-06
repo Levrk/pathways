@@ -1,71 +1,75 @@
-.container {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-}
 
 body{
     background-color: rgb(0, 0, 0);
     overflow: hidden;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-h3{
-    color: #ffffff;
-    font-family:'Times New Roman', Times, serif;
-    text-align: center;
+.page{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.container {
+    padding-top: 5vh;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
+.arrows{
+    position: absolute;
+    display: flex ;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.left-right{
+    display: flex;
+}
 
 .img{
+    display: block;
     opacity: 0;
-    max-width: 60%;  
+    max-height: 80vh;
+    max-width: 60vw;
+}
+
+.img-container{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 p {
     display: unset;
     color:#000000;
     background-color: #ffffff;
+    font-size: x-large; 
     opacity: 0;
-    font-size: x-large;
-    justify-content: center;
-}
-
-.title{
-display: block;
-
-}
-.below{
-    display: block;
-    text-align: center;
 }
 
 .caption-container {
-    visibility: hidden;
-    display: block;
+    height: 5vh;
 }
+
 .top-button-container {
     display: flex;
     justify-content: center;
-    margin-bottom: .2cm;
 }
 
 .bottom-button-container {
-    display: block;
+    display: flex;
     justify-content: center;
 }
 
-.left-button-container {
-    display: flex;
-    justify-content: center;
-    margin-right: 100px;
-}
-
-.right-button-container {
-    display: flex;
-    justify-content: center;
-    margin-left: 100px;
-}
 
 .arrowButton {
     text-decoration: none;
