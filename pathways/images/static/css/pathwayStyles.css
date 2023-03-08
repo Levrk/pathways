@@ -1,0 +1,60 @@
+.pathway-img{
+width: 30vw;;
+}
+.path-name{
+    color: #ffffff;
+    text-decoration: none;
+}
+
+
+.path{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: ;
+    transition: all .4s;
+}
+
+.path:hover{
+    transform:scale(1.2);
+}
+
+.path-container{
+    display: flex;
+    flex-direction: row;
+}
+
+.container{
+transform: translateX(-10vw);
+width: 100vw;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+}
+
+body{
+    overflow-X: hidden;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+}
+
+.main{
+    display: flex;
+    flex-direction: row;
+}
+
+.title{
+    position: fixed;
+    color: #ffffff;
+    right: 20vw;
+    top: 50vh;
+    font-size: 3em;
+    opacity: 0;
+    transition: all 2s;
+}
+
+.on {
+    opacity: 1;
+}
