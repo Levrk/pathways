@@ -14,16 +14,17 @@
         
     <div class="page"> 
     <div class="container">
-            {% include 'arrows.html' %}
-            <div class="img-container">
+           
+            <div  class="img-container">
             
-            <img class="img" id="img" src="{{image.image.url}}" alt="Image">
+            <img onclick="focus()" class="img" id="img" src="{{image.image.url}}" alt="Image">
             
             </div>
-            {% include 'arrows.html' %}
+          
             
     </div>
-    <div class="caption-container">
+    <div class="nav-container">
+        {% include 'arrows.html' %}
     <p id="caption"> &nbsp;{{image.name}}&nbsp;</p>
     </div>
     </div>
@@ -37,7 +38,7 @@ document.addEventListener('keydown', function(event) {
     //if imageConst class is not focus
     if (event.code === 'Space') {
     // Call function for up arrow key
-    handleSpace();
+    focus();
     } 
 
 
