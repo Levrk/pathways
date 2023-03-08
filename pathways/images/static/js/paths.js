@@ -23,20 +23,3 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-
-
-
-/* // Get the path name from the id attribute
-        const pathName = path.querySelector('.pathway-img').id;
-
-        // Add an event listener to update the title text when the path is hovered over
-        path.addEventListener('mouseover', () => {
-        const title = document.getElementById('title');
-        title.textContent = pathName;
-        });
-
-        // Add an event listener to reset the title text when the path is no longer being hovered over
-        path.addEventListener('mouseout', () => {
-        const title = document.getElementById('title');
-        title.textContent = '';
-        });*/
