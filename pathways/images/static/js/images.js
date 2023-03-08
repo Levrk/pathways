@@ -1,5 +1,5 @@
 
-let focusNext = true;
+let focused = false;
 
 window.addEventListener('load', function() {
     const imageConst = document.getElementById('img');
@@ -13,7 +13,7 @@ window.addEventListener('load', function() {
 
 
 function upArrow(url) {
-    if (focusNext === false){return}
+    if (focused === true){return}
     const imageConst = document.getElementById("img");
     imageConst.classList.remove('unFocus');
     const arrows = document.querySelectorAll(".arrowButton");
@@ -29,7 +29,7 @@ function upArrow(url) {
 }
 
 function downArrow(url) {
-    if (focusNext === false){return}
+    if (focused === true){return}
     const imageConst = document.getElementById("img");
     imageConst.classList.remove('unFocus');
     const arrows = document.querySelectorAll(".arrowButton");
@@ -45,7 +45,7 @@ function downArrow(url) {
 }
 
 function leftArrow(url) {
-    if (focusNext === false){return}
+    if (focused === true){return}
     const imageConst = document.getElementById("img");
     imageConst.classList.remove('unFocus');
     const arrows = document.querySelectorAll(".arrowButton");
@@ -61,7 +61,7 @@ function leftArrow(url) {
 }
 
 function rightArrow(url) {
-    if (focusNext === false){return}
+    if (focused === true){return}
     const imageConst = document.getElementById("img");
     imageConst.classList.remove('unFocus');
     const arrows = document.querySelectorAll(".arrowButton");
@@ -76,51 +76,35 @@ function rightArrow(url) {
 }, 500);
 }
 
-function handleSpace( ) {
-
-    if (focusNext) {
-        focus();
-    } else {
-        unFocus();
-    }
-      focusNext= !focusNext; // toggle the boolean flag
-    }
-
-
-
 function focus() {
-    
     const imageConst = document.getElementById("img");
-    imageConst.classList.remove('unFocus'); 
-    imageConst.classList.remove('unFocus');
-    imageConst.classList.add('focus');
     const captionConst = document.getElementById("caption");
     const arrows = document.querySelectorAll(".arrowButton");
-    captionConst.classList.remove('captionOut');
-    captionConst.classList.add('captionIn');
+
+    if (focused==false){
+    imageConst.classList.remove('unFocus'); 
+    imageConst.classList.add('focus');
+    captionConst.classList.remove('fadeOut');
+    captionConst.classList.add('fadeIn'); 
     arrows.forEach(function(arrow) {
         arrow.classList.remove('fadeIn');
-        arrow.classList.remove('reEscape');
-        arrow.classList.add('escape');
+        arrow.classList.add('fadeOut');
         
     }); 
-}
-
-function unFocus() {
-    const imageConst = document.getElementById("img");
+    focused = true;
+    }
+    else {
     imageConst.classList.remove('focus');
     imageConst.classList.add('unFocus');
-    const arrows = document.querySelectorAll(".arrowButton");
-    const captionConst = document.getElementById("caption");
-    captionConst.classList.remove('captionIn');
-    captionConst.classList.add('captionOut');
-    arrows.forEach(function(arrow) {
-        arrow.classList.remove('escape');
-        arrow.classList.add('reEscape');
-    }); 
+    captionConst.classList.remove('fadeIn');
+    captionConst.classList.add('fadeOut'); 
     setTimeout(function() {
         arrows.forEach(function(arrow) {
-            arrow.classList.remove('reEscape');
+            arrow.classList.remove('fadeOut');
+            arrow.classList.add('fadeIn');
         }); 
 }, 500);
+focused = false;
+    }
 }
+

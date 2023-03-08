@@ -13,20 +13,18 @@ body{
 
 .page{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
 }
 .container {
-    padding-top: 5vh;
-    
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .arrows{
-    position: absolute;
+    position: fixed;
     display: flex ;
     flex-direction: column;
     justify-content: center;
@@ -38,10 +36,12 @@ body{
 }
 
 .img{
+    padding-right: 20vw;
     display: block;
     opacity: 0;
-    max-height: 80vh;
+    max-height: 80vh; 
     max-width: 60vw;
+    z-index: 1;
 }
 
 .img-container{
@@ -52,15 +52,21 @@ body{
 }
 
 p {
-    display: unset;
+    writing-mode: vertical-rl;
+    text-align: center;
+    display: fixed;
+    right:0vw;
     color:#000000;
     background-color: #ffffff;
     font-size: x-large; 
     opacity: 0;
+    z-index: 2;
 }
 
-.caption-container {
-    height: 5vh;
+.nav-container { 
+    position: fixed;
+    right: 5vh;
+    display: flex;
 }
 
 .top-button-container {
@@ -75,20 +81,16 @@ p {
 
 
 .arrowButton {
-    text-decoration: none;
-    margin: 0 10px;
-    padding: 10px;
-    background-color:  rgba(255, 255, 255, 0);
+    padding: 2vh;
+    background-color:  rgba(0, 0, 0, 0);
     color: rgb(255, 255, 255);
     border: none;
-    border-radius: 5px;
     font-size: 40px;
-    min-width: 1.5cm;
-    min-height: 1.5cm;
+    transition: all .5s;
 }
 
 .arrowButton:hover{
-color: rgb(255, 0, 0);
+transform:scale(1.5);
 }
 
 .onRight {
@@ -210,51 +212,4 @@ color: rgb(255, 0, 0);
         }
 }
 
-.escape {
-    animation: escape 1s cubic-bezier(0.445, 0.05, 0.55, 0.95) forwards;
-}
-    @keyframes escape {
-        0% {
-            opacity: 1;
-        }
-        100% {
-            opacity: 0;
-    }
-}
 
-
-.reEscape {
-    animation: reEscape 1s cubic-bezier(0.445, 0.05, 0.55, 0.95) forwards;
-}
-    @keyframes reEscape {
-        0% {
-            opacity: 0;
-        }
-        100% {
-            opacity: 1;
-        }
-}
-
-.captionIn {
-    animation: captionIn .6s cubic-bezier(0.445, 0.05, 0.55, 0.95) forwards;
-}
-    @keyframes captionIn {
-        0% {
-            opacity: 0;
-        }
-        100% {
-            opacity: 1;
-        }
-}
-
-.captionOut {
-    animation: captionOut .6s cubic-bezier(0.445, 0.05, 0.55, 0.95) forwards;
-}
-    @keyframes captionOut {
-        0% {
-            opacity: 1;
-        }
-        100% {
-            opacity: 0;
-        }
-}
