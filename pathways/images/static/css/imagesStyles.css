@@ -1,0 +1,260 @@
+
+
+
+
+body{
+    background-color: rgb(0, 0, 0);
+    overflow: hidden;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.page{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.container {
+    padding-top: 5vh;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.arrows{
+    position: absolute;
+    display: flex ;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.left-right{
+    display: flex;
+}
+
+.img{
+    display: block;
+    opacity: 0;
+    max-height: 80vh;
+    max-width: 60vw;
+}
+
+.img-container{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+p {
+    display: unset;
+    color:#000000;
+    background-color: #ffffff;
+    font-size: x-large; 
+    opacity: 0;
+}
+
+.caption-container {
+    height: 5vh;
+}
+
+.top-button-container {
+    display: flex;
+    justify-content: center;
+}
+
+.bottom-button-container {
+    display: flex;
+    justify-content: center;
+}
+
+
+.arrowButton {
+    text-decoration: none;
+    margin: 0 10px;
+    padding: 10px;
+    background-color:  rgba(255, 255, 255, 0);
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 5px;
+    font-size: 40px;
+    min-width: 1.5cm;
+    min-height: 1.5cm;
+}
+
+.arrowButton:hover{
+color: rgb(255, 0, 0);
+}
+
+.onRight {
+    animation: onRight .5s cubic-bezier(0.445, 0.05, 0.55, 0.95) forwards;
+}
+    @keyframes onRight {
+        0% {
+            opacity: 1;
+            transform: translateX(0%);
+        }
+        100% {
+            opacity: -.5;
+            transform: translateX(-100%);
+        }
+}
+
+.onLeft {
+    animation: onLeft .5s cubic-bezier(0.445, 0.05, 0.55, 0.95) forwards;
+}
+    @keyframes onLeft {
+        0% {
+            opacity: 1;
+            transform: translateX(0%);
+        }
+        100% {
+            opacity: -.5;
+            transform: translateX(100%);
+        }
+}
+
+.onUp {
+    animation: onUp .5s cubic-bezier(0.445, 0.05, 0.55, 0.95) forwards;
+}
+    @keyframes onUp {
+        0% {
+            opacity: 1;
+            transform: translateY(0%);
+        }
+        100% {
+            opacity: -.5;
+            transform: translateY(100%);
+        }
+}
+
+.onDown {
+    animation: onDown .5s cubic-bezier(0.445, 0.05, 0.55, 0.95) forwards;
+}
+    @keyframes onDown {
+        0% {
+            opacity: 1;
+            transform: translateY(0%);
+        }
+        100% {
+            opacity: -.5;
+            transform: translateY(-100%);
+        }
+}
+
+.fadeOut {
+    animation: fadeOut .5s cubic-bezier(0.445, 0.05, 0.55, 0.95) forwards;
+}
+    @keyframes fadeOut {
+        0% {
+            opacity: 1;
+        }
+        100% {
+            opacity: 0;
+        }
+}
+
+.fadeIn {
+    animation: fadeIn .6s cubic-bezier(0.445, 0.05, 0.55, 0.95) forwards;
+}
+    @keyframes fadeIn {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+}
+
+.slowFadeIn {
+    animation: fadeIn 1s cubic-bezier(0.645, 0.045, 0.355, 1) forwards;
+}
+    @keyframes fadeIn {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+}
+
+
+.focus {
+    opacity: 1;
+    animation: focus 1s cubic-bezier(0.445, 0.05, 0.55, 0.95) forwards;
+}
+    @keyframes focus {
+        0% {
+            transform: scale(1) ;
+        }
+        100% {
+            transform: scale(1.2) ;
+        }
+}
+
+.unFocus {
+    opacity: 1;
+    animation: unFocus 1s cubic-bezier(0.445, 0.05, 0.55, 0.95) forwards;
+}
+    @keyframes unFocus {
+        0% {
+            transform: scale(1.2) ;
+        }
+        100% {
+            transform: scale(1) ;
+        }
+}
+
+.escape {
+    animation: escape 1s cubic-bezier(0.445, 0.05, 0.55, 0.95) forwards;
+}
+    @keyframes escape {
+        0% {
+            opacity: 1;
+        }
+        100% {
+            opacity: 0;
+    }
+}
+
+
+.reEscape {
+    animation: reEscape 1s cubic-bezier(0.445, 0.05, 0.55, 0.95) forwards;
+}
+    @keyframes reEscape {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+}
+
+.captionIn {
+    animation: captionIn .6s cubic-bezier(0.445, 0.05, 0.55, 0.95) forwards;
+}
+    @keyframes captionIn {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+}
+
+.captionOut {
+    animation: captionOut .6s cubic-bezier(0.445, 0.05, 0.55, 0.95) forwards;
+}
+    @keyframes captionOut {
+        0% {
+            opacity: 1;
+        }
+        100% {
+            opacity: 0;
+        }
+}

@@ -1,0 +1,29 @@
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/pathwayStyles.css' %}">
+<script src="{% static 'js/paths.js' %}"></script>
+
+<body>
+    <div class="main"> 
+
+    <div class="container">
+
+    {% for path in pathways %}
+
+    <a class="path" href="image/{{path.start.id}}/"> 
+
+    <img class="pathway-img" id="{{path.name}}" src="{{path.image.url}}" alt="Image"></img>
+    </a>
+    {% endfor %}
+    </div>
+
+    <!-- !page split! -->
+
+    <div class="title" id="title"> 
+
+        Path Title
+
+    </div>
+
+</div>
+
+</body>
