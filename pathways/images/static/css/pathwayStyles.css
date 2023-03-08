@@ -1,5 +1,5 @@
 .pathway-img{
-width: 30vw;;
+width: 35vw;;
 }
 .path-name{
     color: #ffffff;
@@ -12,10 +12,12 @@ width: 30vw;;
     flex-direction: row;
     align-items: center;
     justify-content: ;
+    z-index: 1;
     transition: all .4s;
 }
 
 .path:hover{
+    z-index: 2;
     transform:scale(1.2);
 }
 
