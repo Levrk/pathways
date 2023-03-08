@@ -7,7 +7,6 @@ class Image (models.Model):
 	name -> image caption
 	image -> image file
 	l,r,u,d -> images that are l,r,u,d from self
-	
 	"""
 	name = models.CharField(max_length=100,null=True)
 	image = models.ImageField(upload_to='files/images')
@@ -24,7 +23,6 @@ class Path (models.Model):
 	name -> path name
 	image -> cover photo
 	start -> starting image
-	
 	"""
 	name = models.CharField(max_length=100,null=True)
 	image = models.ImageField(upload_to='files/images' , default="files/images/blank.png")
