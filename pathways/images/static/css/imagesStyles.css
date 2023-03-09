@@ -29,13 +29,18 @@ body{
 .left-right{
     /* contains left and right arrows */
     display: flex;
+    justify-content: center;
+    
 }
 
 .button-container {
     /* contains buttons */
     display: flex;
-    justify-content: center;
+    min-width: 5vw;
+    min-height: 5vw;
     transition: all 1s;
+    padding-left: 3vw;
+    padding-right: 3vw;
 }
 
 .button-container:hover{
@@ -44,20 +49,12 @@ body{
 
 .img{
     /* This element is the main img */
-    padding-right: 20vw;
+    margin-right: 25vw;
     display: block;
     opacity: 0;
     max-height: 80vh; 
     max-width: 60vw;
     z-index: 1;
-}
-
-.img-container{
-    /* contains img */
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 p {
@@ -67,8 +64,9 @@ p {
     display: fixed;
     right:0vw;
     color:#000000;
+    font-family: 'Franklin Gothic Medium';
     background-color: #ffffff;
-    font-size: x-large; 
+    font-size: 2em; 
     opacity: 0;
     z-index: 2;
 }
@@ -76,7 +74,7 @@ p {
 .nav-container { 
      /* contains arrows and caption */
     position: fixed;
-    right: 5vh;
+    right: 0vh;
     display: flex;
 }
 
