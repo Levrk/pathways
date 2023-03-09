@@ -1,7 +1,5 @@
 
 
-
-
 body{
     background-color: rgb(0, 0, 0);
     overflow: hidden;
@@ -12,19 +10,16 @@ body{
 }
 
 .page{
+    /* contains img & navigation */
+    width: 100vw;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
 }
-.container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
 
 .arrows{
-    position: fixed;
+    /* contains arrows */
     display: flex ;
     flex-direction: column;
     justify-content: center;
@@ -32,10 +27,23 @@ body{
 }
 
 .left-right{
+    /* contains left and right arrows */
     display: flex;
 }
 
+.button-container {
+    /* contains buttons */
+    display: flex;
+    justify-content: center;
+    transition: all 1s;
+}
+
+.button-container:hover{
+    transform: scale(1.5);
+}
+
 .img{
+    /* This element is the main img */
     padding-right: 20vw;
     display: block;
     opacity: 0;
@@ -45,6 +53,7 @@ body{
 }
 
 .img-container{
+    /* contains img */
     height: 100%;
     display: flex;
     align-items: center;
@@ -52,6 +61,7 @@ body{
 }
 
 p {
+    /* this element is the caption from image.name */
     writing-mode: vertical-rl;
     text-align: center;
     display: fixed;
@@ -64,36 +74,24 @@ p {
 }
 
 .nav-container { 
+     /* contains arrows and caption */
     position: fixed;
     right: 5vh;
     display: flex;
 }
 
-.top-button-container {
-    display: flex;
-    justify-content: center;
-}
-
-.bottom-button-container {
-    display: flex;
-    justify-content: center;
-}
-
-
 .arrowButton {
+    /* this element is the arrow */
     padding: 2vh;
     background-color:  rgba(0, 0, 0, 0);
     color: rgb(255, 255, 255);
     border: none;
-    font-size: 40px;
-    transition: all .5s;
-}
-
-.arrowButton:hover{
-transform:scale(1.5);
+    opacity: 0;
+    font-size: 4em;
 }
 
 .onRight {
+    /* to be applied when img slides right */
     animation: onRight .5s cubic-bezier(0.445, 0.05, 0.55, 0.95) forwards;
 }
     @keyframes onRight {
@@ -108,6 +106,7 @@ transform:scale(1.5);
 }
 
 .onLeft {
+    /* to be applied when img slides left */
     animation: onLeft .5s cubic-bezier(0.445, 0.05, 0.55, 0.95) forwards;
 }
     @keyframes onLeft {
@@ -122,6 +121,7 @@ transform:scale(1.5);
 }
 
 .onUp {
+    /* to be applied when img slides up */
     animation: onUp .5s cubic-bezier(0.445, 0.05, 0.55, 0.95) forwards;
 }
     @keyframes onUp {
@@ -136,6 +136,7 @@ transform:scale(1.5);
 }
 
 .onDown {
+    /* to be applied when img slides down */
     animation: onDown .5s cubic-bezier(0.445, 0.05, 0.55, 0.95) forwards;
 }
     @keyframes onDown {
@@ -150,6 +151,7 @@ transform:scale(1.5);
 }
 
 .fadeOut {
+    /* to be applied when element fades out */
     animation: fadeOut .5s cubic-bezier(0.445, 0.05, 0.55, 0.95) forwards;
 }
     @keyframes fadeOut {
@@ -162,6 +164,7 @@ transform:scale(1.5);
 }
 
 .fadeIn {
+    /* to be applied when element is faded in */
     animation: fadeIn .6s cubic-bezier(0.445, 0.05, 0.55, 0.95) forwards;
 }
     @keyframes fadeIn {
@@ -174,6 +177,7 @@ transform:scale(1.5);
 }
 
 .slowFadeIn {
+    /* to be applied when img is loaded */
     animation: fadeIn 1s cubic-bezier(0.645, 0.045, 0.355, 1) forwards;
 }
     @keyframes fadeIn {
@@ -187,6 +191,7 @@ transform:scale(1.5);
 
 
 .focus {
+    /* to be applied when img is focused */
     opacity: 1;
     animation: focus 1s cubic-bezier(0.445, 0.05, 0.55, 0.95) forwards;
 }
@@ -200,6 +205,7 @@ transform:scale(1.5);
 }
 
 .unFocus {
+    /* to be applied when img is unfocused */
     opacity: 1;
     animation: unFocus 1s cubic-bezier(0.445, 0.05, 0.55, 0.95) forwards;
 }

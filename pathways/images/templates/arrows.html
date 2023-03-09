@@ -1,23 +1,29 @@
-<div class="'arrows">
-                
-    <div style="{% if image.up is null %}visibility: hidden;{% endif %}"
-    class="top-button-container">
-            <button onclick='upArrow("{{image.up.id}}/")' class="arrowButton">&uarr;</button>
-        </div>
-    <div class="left-right"> 
-    
 
-<div style="{% if image.left is null %}visibility: hidden;{% endif %}"
-class="left-button-container">
-<button onclick='leftArrow("{{image.left.id}}/")' class="arrowButton">&larr;</button>
+<!-- ! main section start! -->
+<div class="arrows">
+
+    <div style="{% if image.up is null %}visibility: hidden;{% endif %}" class="button-container">
+    <button onclick='upArrow("{{image.up.id}}/")' class="arrowButton">&uarr;</button>
     </div>
-    <div style="{% if image.right is null %}visibility: hidden;{% endif %}" class="right-button-container">
-        <button onclick='rightArrow("{{image.right.id}}/")' class="arrowButton">&rarr;</button>
-        </div>
-</div>
 
-<div style="{% if image.down is null %}visibility: hidden;{% endif %}"
-    class="bottom-button-container">
-        <button onclick='downArrow("{{image.down.id}}/")' class="arrowButton">&darr;</button>
-        </div>
+    <!-- ! middle buttons start ! -->
+    <div class="left-right"> 
+        <!-- ! left button ! -->
+            <div style="{% if image.left is null %}visibility: hidden;{% endif %}" class="button-container">
+            <button onclick='leftArrow("{{image.left.id}}/")' class="arrowButton">&larr;</button>
+            </div>
+        <!-- ! right button ! -->
+            <div style="{% if image.right is null %}visibility: hidden;{% endif %}" class="button-container">
+            <button onclick='rightArrow("{{image.right.id}}/")' class="arrowButton">&rarr;</button>
+            </div>
+
+    <!-- ! middle buttons start ! -->
+    </div>
+
+<!-- ! down button! -->
+    <div style="{% if image.down is null %}visibility: hidden;{% endif %}" class="button-container">
+    <button onclick='downArrow("{{image.down.id}}/")' class="arrowButton">&darr;</button>
+    </div>
+
+<!-- ! main section end ! -->
 </div>

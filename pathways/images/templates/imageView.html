@@ -10,24 +10,29 @@
     <script src="{% static 'js/images.js' %}"></script>
 </head>
 <body>
-    
-        
+
+    <!-- ! main section start ! -->
     <div class="page"> 
-    <div class="container">
-           
-            <div  class="img-container">
-            
-            <img onclick="focus()" class="img" id="img" src="{{image.image.url}}" alt="Image">
-            
-            </div>
-          
-            
-    </div>
+
+        <!-- ! image ! -->
+        <div  class="img-container">
+        
+        <img onclick="focus()" class="img" id="img" src="{{image.image.url}}" alt="Image">
+        
+        </div>
+        
+        <!-- ! navigation ! -->
+
     <div class="nav-container">
+
         {% include 'arrows.html' %}
+
     <p id="caption"> &nbsp;{{image.name}}&nbsp;</p>
+
     </div>
+    <!-- ! main section end ! -->
     </div>
+
 </body>
 </html>
 
