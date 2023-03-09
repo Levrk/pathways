@@ -9,6 +9,17 @@ Simply posting an image or slideshow on social media allows for passive consumpt
 An audience should be given the opportunity to explore and interact with a piece as they see fit. 
 
 ---
+![space-example](pathways/files/images/assets/space-example.png?raw=true)
+
+![fox-example](pathways/files/images/assets/fox-example.png?raw=true)
+---
+Setting up the Virtual Environment:
+> python -m venv env
+
+> source env/bin/activate
+
+> pip install -r requirements.txt
+---
 
 ### Made With: Django, Python, HTML, CSS, JavaScript
 
